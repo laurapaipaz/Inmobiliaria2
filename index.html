@@ -1,0 +1,47 @@
+<html ng-app="myApp" id="myApp">
+ <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inmobiliaria</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./main.js"></script>
+    <link href="recursos/estilos.css" rel="stylesheet"/>
+
+</head>
+<br>
+<br>
+ <body ng-controller="myController">
+     {{msg}}
+           <a href="javascript:;" id="lbtnTest"> Ayuda </a>
+           <br>
+           <br>
+           <fieldset>
+
+           <form><br>
+
+            <div class="form-group">
+                <label for="valor">Cedula</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Ingresa tu cedula" id="cedula" ng-model="formData.cedula"><br>
+                <label for="valor">Nombre</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Escribe tu nombre" id="nombre" ng-model="formData.nombre"><br>
+                <label for="valor">Apellido</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Escribe tu apellido" id="apellido" ng-model="formData.apellido"><br>
+                <label for="valor">Correo electronico</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Ingresa correo electronico" ng-model="formData.correo"><br>
+                <label for="valor">Telefono</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Ingresa numero de telefono" ng-model="formData.telefono"><br>
+                <label for="valor">Clave</label><br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Digita tu clave" ng-model="formData.clave">
+
+
+
+                {{todos}}
+
+            
+            </div>
+            <br><br>
+            <button class="btn btn-primary btn-lg" ng-click="createTodo()">Crear Usuario</button>
+            <br>
+        </form>
+    </fieldset>
+ </body>
+ </html>
