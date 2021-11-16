@@ -20,7 +20,7 @@ require('./conexion')
 
 app.post("/upload", (req, res) => {
     var myobj = { cedula: req.body.cedula, nombre:req.body.nombre, apellido:req.body.apellido, correo: req.body.correo,telefono: req.body.telefono, clave: req.body.clave  };
-    modelo.collection.insertOne(myobj, function(err, res) {
+    modeloUsario.collection.insertOne(myobj, function(err, res) {
     if (err) throw err;
   
     })
