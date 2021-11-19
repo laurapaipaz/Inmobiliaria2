@@ -1,10 +1,11 @@
+const { ObjectId} = require ('bson')
 var mongoose=require("mongoose")
 const inmuebleEsquema=mongoose.Schema(
     {
         tipo:{type: String},
         no_hab:{type: String},
-        ubicacion:{type:String},
-        precio:{type:Double},
+        ubicacion:{type: ObjectId},
+        precio:{type:Number},
         telefono:{type:String},
         imagen:{type:String}
     }

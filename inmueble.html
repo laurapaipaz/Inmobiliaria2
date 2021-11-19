@@ -1,0 +1,50 @@
+<html ng-app="myApp" id="myApp">
+
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>Inmobiliaria</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./main.js"></script>
+    <link href="recursos/estilos.css" rel="stylesheet" />
+
+
+</head>
+
+<body ng-controller="myController">
+    <div class="form-group">
+        {{message}}
+
+        <label for="tipo">Tipo</label><br>
+        <input type="text" class="form-control input-lg text-center" placeholder="Escribe el tipo" id="tipo"
+            ng-model="formData.tipo"><br>
+
+        <label for="no_hab">Número de habitaciones</label><br>
+        <input type="text" class="form-control input-lg text-center" placeholder="Número de habitaciones" id="no_hab"
+            ng-model="formData.no_hab"><br>
+
+        <label for="ubicacion">Ubicacion</label><br>
+        <input type="ubicacion" class="form-control input-lg text-center" placeholder="Ingresa la ubicación"
+            id="ubicacion" ng-model="formData.ubicacion"><br>
+
+        <label for="precio">Precio</label><br>
+        <input type="precio" class="form-control input-lg text-center" placeholder="Ingresa el precio" id="precio"
+            ng-model="formData.precio"><br>
+
+        <label for="telefono">Telefono</label><br>
+        <input type="telefono" class="form-control input-lg text-center" placeholder="Ingresa el telefono" id="telefono"
+            ng-model="formData.telefono"><br>
+        
+        
+    </div>
+    <br><br>
+    <button class="btn btn-primary btn-lg" ng-click="RegistrarInmueble()">Registrar</button>
+    <br>
+
+
+</body>
+
+</html>
