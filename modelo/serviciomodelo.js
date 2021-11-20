@@ -30,6 +30,21 @@ app.post("/upload", (req, res) => {
   res.send("datos creados")
 })
 
+modeloUbicacion.find({}, (err, docs) => {
+  let listaCiudades = []
+  for (let i = 0; i < docs.length; i++) {
+    listaCiudades.push(docs[i].ciudad)
+  }
+  listaCiudades = listaCiudades.filter((item, index) => {
+    return listaCiudades.indexOf(item) === index;
+  })
+  console.log(listaCiudades);
+  res.send(listaCiudades)
+})
+
+
+
+
 
 //Insertar un inmueble
 app.post("/insertarInmueble", (req, res) => {
@@ -45,9 +60,10 @@ app.post("/insertarInmueble", (req, res) => {
 })
 
 
+
 app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
-  createReadStream('./inmueble.html').pipe(res)
+  createReadStream('./index.html').pipe(res)
 })
 
 app.listen(600, () => {
