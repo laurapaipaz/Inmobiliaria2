@@ -1,0 +1,91 @@
+
+/*
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+*/
+
+
+
+
+  html {
+    font-size: 50pt;
+  
+    font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color:navy;
+  }
+ 
+  section span {
+    margin: 0;
+    font-size: 300%;
+    text-align: left;
+    line-height: 1;
+    padding-top: calc(12.5vh - 20pt);
+
+    font-weight: 1000;
+    color: rgb(187, 83, 14);
+    font-style:oblique;
+    font-family:cursive
+    
+  }
+span {
+    margin: 0;
+    font-size: 80%;
+    text-align: left;
+    font-weight: 50;
+    color: rgb(123, 170, 207);
+
+    
+  }
+
+  header h1 {
+    font-weight: 600;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    color: rgb(123, 170, 207);
+  }
+  header h2 {
+    font-weight: 300;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: rgb(123, 170, 207);
+
+  }
+  header h3 {
+    font-weight: 200;
+    display: inline;
+
+    color: rgb(123, 170, 207);
+
+  }
+
+
+
+
+
+
+ 
