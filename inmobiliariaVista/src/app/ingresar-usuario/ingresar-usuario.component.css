@@ -32,6 +32,7 @@ fieldset, img {border:0}
 /* Style the middle column */
 .middle {
   grid-area: middle;
+  grid-template-rows: 800px;
   background-color: #1e8ea1;
 }
 

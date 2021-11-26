@@ -39,7 +39,7 @@ modeloUbicacion.find({}, (err, docs) => {
     return listaCiudades.indexOf(item) === index;
   })
   console.log(listaCiudades);
-  res.send(listaCiudades)
+  //res.send(listaCiudades)
 })
 
 
@@ -59,6 +59,24 @@ app.post("/insertarInmueble", (req, res) => {
   res.send("datos creados")
 })
 
+
+
+app.get('/consultaInmuebles', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  
+  res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
+  //createReadStream('./index.html').pipe(res)
+  //console.log('Respuesta del servidor por petición de consultar inmuebles')
+  const datos = {
+    Nombre:"Juan",
+    Apellido: "Cardona"
+
+  }
+  //recibo un json y envión un json 
+  res.end(JSON.stringify(datos))
+})
 
 
 app.get('/', (req, res) => {

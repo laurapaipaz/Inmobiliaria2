@@ -179,6 +179,29 @@ div.fixed2{
   z-index: -1;
 }
 
+/*LINK HOME*/
+a{
+  color:rgb(230, 130, 0);
+  font-weight: 2000%;
+  
+  
+}
+a:link {
+  text-decoration: none;
+  
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
 
 
 /*
