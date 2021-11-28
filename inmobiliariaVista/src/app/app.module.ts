@@ -10,6 +10,7 @@ import { ConsultaInmuebleComponent } from './consulta-inmueble/consulta-inmueble
 import { ConsultaInmueblesService } from './consulta-inmuebles.service';
 import { HomeComponent } from './home/home.component';
 import { IngresarUsuarioComponent } from './ingresar-usuario/ingresar-usuario.component';
+import { RegistrarUsuarioService } from './registrar-usuario.service';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,8 @@ import { IngresarUsuarioComponent } from './ingresar-usuario/ingresar-usuario.co
     HttpClientModule
   ],
   //Le voy a proveer
-  //Se debe crear un servicio por cada componente
-  providers: [ConsultaInmueblesService],
+  //Se debe crear un servicio por cada componente 1:09
+  providers: [ConsultaInmueblesService,RegistrarUsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

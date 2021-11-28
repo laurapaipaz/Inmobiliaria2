@@ -6,10 +6,9 @@ const { createReadStream } = require('fs')
 
 const app = new express();
 const HTML_CONTENT_TYPE = 'text/html'
-
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
 
+app.use(bodyParser.json());
 app.use(express.static("public"));
 
 const path = require("path");
@@ -42,11 +41,8 @@ modeloUbicacion.find({}, (err, docs) => {
   //res.send(listaCiudades)
 })
 
-
-
-
-
 //Insertar un inmueble
+//******************** */
 app.post("/insertarInmueble", (req, res) => {
   //Hacer el filtro 
   modeloUbicacion.find({ ciudad: 'Bogotá', barrio: 'Salina' }, (err, docs) => {
@@ -59,25 +55,38 @@ app.post("/insertarInmueble", (req, res) => {
   res.send("datos creados")
 })
 
+//Insertar un usuaurio
+//******************* */
+app.post("/insertar-usuario", (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
+  //crea el esquema
+  //var myobj = { cedula: req.body.cedula, nombre: req.body.nombre, apellido: req.body.apellido, correo: req.body.correo, telefono: req.body.telefono, clave: req.body.clave };
+  //modeloUsario.collection.insertOne(myobj, function (err, res) {
+  //if (err) throw err;
+  //})
+  //res.send("datos creados")
+  console.log("Respuesta del servidor por petición de registro usuario")
+})
 
-
+//Consultar inmueble
+//****************** */
 app.get('/consultaInmuebles', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
   //createReadStream('./index.html').pipe(res)
   //console.log('Respuesta del servidor por petición de consultar inmuebles')
   const datos = {
-    Nombre:"Juan",
+    Nombre: "Juan",
     Apellido: "Cardona"
-
   }
   //recibo un json y envión un json 
   res.end(JSON.stringify(datos))
 })
-
 
 app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
