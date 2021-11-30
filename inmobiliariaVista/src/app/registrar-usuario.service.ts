@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-
+import { HttpClient } from "@angular/common/http";
+import { Data } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +8,19 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 export class RegistrarUsuarioService {
 
   constructor(private http: HttpClient) { }
-  postUsuario() {
-    const headers = new HttpHeaders({
-      'content-Type': 'application/x-www-form-urlencoded'
+
+
+  registrarUsuario(usuario:Data) {
+    this.http.put("http://localhost:600/registrar-usuario",usuario).subscribe(data=>{
+      console.log(data)
     })
+    //const headers = new HttpHeaders({
+     // 'content-Type': 'application/x-www-form-urlencoded'
+    //})
 
     //colocamos la función que nos permite conectar cone el servidor (API)
-    this.http.post("http://localhost:600/registrar-usuario", { headers: headers }).subscribe(data => {
+   // this.http.post("http://localhost:600/registrar-usuario", { headers: headers }).subscribe(data => {
       //console.log(data)
-    })
+    //})
   }
 }
