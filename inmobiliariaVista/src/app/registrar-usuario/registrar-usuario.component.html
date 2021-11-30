@@ -8,22 +8,22 @@
 
       <form action="/">
 
-        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <label id="icon" for="email"><i class="icon-envelope "></i></label>
         <input type="text" name="email" id="email" placeholder="Email" required />
 
-        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <label id="icon" for="nombre"><i class="icon-user"></i></label>
         <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
 
-        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <label id="icon" for="apellido"><i class="icon-user"></i></label>
         <input type="text" name="apellido" id="apellido" placeholder="Apellido" required />
 
-        <label id="icon" for="name"><i class="icon-bookmark"></i></label>
+        <label id="icon" for="cedula"><i class="icon-bookmark"></i></label>
         <input type="text" name="cedula" id="cedula" placeholder="Cedula" required />
 
-        <label id="icon" for="name"><i class="icon-phone"></i></label>
+        <label id="icon" for="telefono"><i class="icon-phone"></i></label>
         <input type="text" name="telefono" id="telefono" placeholder="Telefono" required />
 
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
+        <label id="icon" for="clave"><i class="icon-shield"></i></label>
         <input type="password" name="clave" id="clave" placeholder="Contraseña" required />
 
 
@@ -34,7 +34,7 @@
           <label for="female" class="radio">Female</label>
         </div>
 
-        <a href="#" class="button">Registrar</a>
+        <a id='submit' class="button" (click)="registrarUsuario()">Registrar</a>
       </form>
     </div>
   </div>

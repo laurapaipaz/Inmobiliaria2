@@ -21,7 +21,9 @@ import { RegistrarUsuarioService } from './registrar-usuario.service';
     IngresarUsuarioComponent
   ],
   imports: [
+    //Arrancar el browser
     BrowserModule,
+    //Manejar el routing
     AppRoutingModule,
     //Agregar el modulo del routing
     HttpClientModule
