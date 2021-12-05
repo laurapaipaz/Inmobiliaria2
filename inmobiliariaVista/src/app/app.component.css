@@ -71,6 +71,12 @@ div.fixed2{
   right: 120px;
   width: auto;
 }
+div.fixed3{
+  position: fixed;
+  top: 10px;
+  right: 200px;
+  width: auto;
+}
 .r1 a
 {
     width:140px;
@@ -98,15 +104,16 @@ div.fixed2{
     /* Use este método para establecer el tamaño del icono, establecer directamente el ancho y la altura no tendrá efecto */
 
 }
+.casa::before
+{
+    content: "\f015";        /* Número de icono */
+    font-family: FontAwesome;
+    color: rgb(230, 130, 0);
+    background-size: cover;         
+    font-size: 150%;
+    /* Use este método para establecer el tamaño del icono, establecer directamente el ancho y la altura no tendrá efecto */
 
-
-
-
-
-
-
-
-
+}
 
 /* Style the header */
 .header {

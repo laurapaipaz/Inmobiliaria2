@@ -9,12 +9,26 @@
       <form action="/">
 
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
-        <input type="text" name="name" id="name" placeholder="Email" required />
+        <input 
+        type="text" 
+        
+        name="email" 
+        id="email" 
+        placeholder="Email" 
+        required="required" 
+        />
 
         <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input type="password" name="name" id="name" placeholder="Password" required />
+        <input 
+        type="password" 
+        
+        name="password" 
+        id="password" 
+        placeholder="Password" 
+        required="required"
+        />
 
-        <a href="#" class="button">Ingresar</a>
+        <a type="submit" class="button" (click)="login()">Ingresar</a>
       </form>
     </div>
   </div>

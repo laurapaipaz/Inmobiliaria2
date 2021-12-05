@@ -65,7 +65,6 @@ app.put("/registrar-usuario", (req, res) => {
   //res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
   
   //crea el esquema
-  //*****************
   var myobj = { cedula: req.body.cedula, nombre: req.body.nombre, apellido: req.body.apellido, correo: req.body.email, telefono: req.body.telefono, clave: req.body.contraseña };
   modeloUsario.collection.insertOne(myobj, function (err, res) {
   if (err) throw err;
@@ -103,6 +102,18 @@ app.get('/consultaInmuebles', (req, res) => {
   //recibo un json y envión un json 
   res.send(JSON.stringify(datos))
 })
+
+
+//Consultar casas
+//*************** */
+app.get('/consultaCasas', (req, res) => {
+  modeloinmueble.find({tipo:req.query.tipo},(err,casas)=>{
+    res.end(JSON.stringify(casas))
+  })
+})
+
+
+
 
 app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
