@@ -1,0 +1,116 @@
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+
+
+  body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+  pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+    padding:0;
+    margin: 0;}
+
+    h5 {
+        font-size: 25px;
+        font-weight: 150;
+        color: rgb(230, 130, 0);
+        text-align: left;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      
+      
+      
+      }
+      P {
+        font-size: 15px;
+        font-weight: 10;
+        color: rgb(123, 170, 207);
+        text-align: left;
+        padding-top: 5px;
+        margin-bottom: 5px;
+
+      
+      }
+  
+  
+  fieldset, img {border: 2px;}
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header header header header header'
+      'middle middle middle middle middle middle' 
+      'footer footer footer footer footer footer';
+   /*grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+
+
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+    grid-template-rows: 800px;
+    background-color: #1e8ea1;
+  }
+  
+  
+  
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #87e7f8;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle'  
+        'footer footer footer footer footer footer';
+    }
+  }
+  .testbox {
+    margin: 5px 5px 5px 5px;
+    width: 400; 
+    height: 300; 
+    -webkit-border-radius: 8px/7px; 
+    -moz-border-radius: 8px/7px; 
+    border-radius: 8px/7px; 
+    background-color: #003842; 
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    
+  }
+  
+  
+  
+  
+ 
+  
+
+  
+
+  
+
+ 
+  
+
+
+  
+ 
+  
+
+    
+  

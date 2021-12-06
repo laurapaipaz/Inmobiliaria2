@@ -15,7 +15,7 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     //Para acceder a los metodos
-    alert("Hola mundo")
+    //alert("Hola mundo")
     //this.service.registrarUsuario()
   }
 
@@ -24,9 +24,9 @@ registrarUsuario(){
   let nombre =  (document.getElementById('nombre') as HTMLInputElement).value
   let apellido =  (document.getElementById('apellido') as HTMLInputElement).value
   let cedula =  (document.getElementById('cedula') as HTMLInputElement).value
-  let telefono =  (document.getElementById('nombre') as HTMLInputElement).value
+  let telefono =  (document.getElementById('telefono') as HTMLInputElement).value
   let contraseña =  (document.getElementById('clave') as HTMLInputElement).value
-  alert(email)
+  
   
   var usuario ={
     email:email,

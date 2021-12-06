@@ -5,25 +5,32 @@
 h1{
   color:rgb(230, 130, 0);
   font-weight: 1000;
+  font-size:50px;
+  text-align: left;
+  top: 5px;
   
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   display: inline;
   margin: 0;
   padding: 0;
   color: rgb(230, 130, 0);
   line-height: 3;
+  
 }
 
 h3 {
-
-  font-weight: 500;
+  font-size:20px;
+  font-weight: 200;
+  text-align: center;
   display: inline;
   color: rgb(123, 170, 207);
-  line-height: 2;
 
+  text-align: center;
+
+  
 }
 h4 {
   font-size: x-small;
@@ -71,6 +78,30 @@ div.fixed2{
   right: 120px;
   width: auto;
 }
+div.fixed3{
+  position: fixed;
+  top: 5%;
+  right: 54%;
+  border: 1px solid rgb(230, 130, 0);
+  background-color: #003842;
+
+}
+div.fixed4{
+  position: fixed;
+  top: 5%;
+  right: 46%;
+  border: 1px solid rgb(230, 130, 0);
+  background-color: #003842;
+
+}
+div.fixed5{
+  position: fixed;
+  top: 0;
+  display: block;
+  background-color: #003842;
+  width: 100%;
+
+}
 .r1 a
 {
     width:140px;
@@ -98,15 +129,16 @@ div.fixed2{
     /* Use este método para establecer el tamaño del icono, establecer directamente el ancho y la altura no tendrá efecto */
 
 }
+.casa::before
+{
+    content: "\f015";        /* Número de icono */
+    font-family: FontAwesome;
+    color: rgb(230, 130, 0);
+    background-size: cover;         
+    font-size: 150%;
+    /* Use este método para establecer el tamaño del icono, establecer directamente el ancho y la altura no tendrá efecto */
 
-
-
-
-
-
-
-
-
+}
 
 /* Style the header */
 .header {
@@ -183,11 +215,14 @@ div.fixed2{
 a{
   color:rgb(230, 130, 0);
   font-weight: 2000%;
+  text-align: center;
+  
   
   
 }
 a:link {
   text-decoration: none;
+  
   
 }
 
@@ -202,6 +237,8 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
+
 
 
 /*
