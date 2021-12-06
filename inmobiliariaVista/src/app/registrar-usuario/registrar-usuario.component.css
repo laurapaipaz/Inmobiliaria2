@@ -10,7 +10,7 @@ fieldset, img {border:0}
 .grid-container {
   display: grid;
   grid-template-areas: 
-     
+  'header header header header header header' 
     'middle middle middle middle middle middle' 
     'footer footer footer footer footer footer';
  /*grid-column-gap: 10px; - if you want gap between the columns */
