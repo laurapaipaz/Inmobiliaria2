@@ -13,7 +13,7 @@ export class ConsultaInmueblesService {
       'content-Type': 'application/x-www-form-urlencoded'
     })
     //colocamos la función que nos permite conectar cone el servidor (API)
-    this.http.get("http://localhost:600/consultaInmuebles", { headers: headers }).subscribe(data => {
+    this.http.get("http://localhost:400/consultaInmuebles", { headers: headers }).subscribe(data => {
       console.log(data)
     })
   }

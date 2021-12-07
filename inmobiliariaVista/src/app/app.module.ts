@@ -16,6 +16,7 @@ import { FormsModule } from "@angular/forms";
 import { ConsultaCasasComponent } from './consulta-casas/consulta-casas.component'
 import { ConsultaCasasService } from './consulta-casas.service';
 import { UsersService } from "./users.service";
+
 //import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import { UsersService } from "./users.service";
   ],
   //Le voy a proveer
   //Se debe crear un servicio por cada componente 1:09
-  providers: [ConsultaInmueblesService,RegistrarUsuarioService, ConsultaCasasService, UsersService],
+  providers: [
+    ConsultaInmueblesService,
+    RegistrarUsuarioService, 
+    ConsultaCasasService, 
+    UsersService
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

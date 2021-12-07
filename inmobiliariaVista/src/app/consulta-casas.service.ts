@@ -10,7 +10,8 @@ export class ConsultaCasasService {
 
 
   getConsultaCasas(){
-    return this.http.get("http://localhost:600/consultaCasas?tipo=casa")
+    return this.http.get("http://localhost:400/consultaCasas?tipo=casa")
+    
 
   }
 }

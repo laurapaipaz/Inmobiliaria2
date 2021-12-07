@@ -2,12 +2,12 @@ const { ObjectId} = require ('bson')
 var mongoose=require("mongoose")
 const inmuebleEsquema=mongoose.Schema(
     {
-        tipo:{type: String},
-        no_hab:{type: String},
-        ubicacion:{type: ObjectId},
-        precio:{type:Number},
-        telefono:{type:String},
-        imagen:{type:String}
+        tipo:String,
+        no_hab:String,
+        ubicacion:{type:mongoose.Schema.ObjectId,ref:'ubicaciones'},
+        precio:Number,
+        telefono:String,
+        imagen:String
     }
 )
 

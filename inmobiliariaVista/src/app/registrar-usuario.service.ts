@@ -11,7 +11,7 @@ export class RegistrarUsuarioService {
 
 
   registrarUsuario(usuario:Data) {
-    this.http.put("http://localhost:600/registrar-usuario",usuario).subscribe(data=>{
+    this.http.put("http://localhost:400/registrar-usuario",usuario).subscribe(data=>{
       console.log(data)
     })
     

@@ -1,10 +1,3 @@
-<!--<div *ngFor="let casa of casas">
-    <p>{{casa.no_hab}}</p>
-    <p>{{casa.tipo}}</p>
-    <p>{{casa.precio}}</p>
-    <img src="{{casa.imagen}}">
-
-</div>-->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
     type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -31,6 +24,7 @@
 
                                 <p>Habitaciones: {{casas[i].no_hab}}
                                 <p>Telefono: {{casas[i].telefono}}
+                                <p>Ciudad: {{casas[i].ubicacion.ciudad}}
                                 </p>
                                 <div
                                     class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
@@ -46,8 +40,7 @@
 
 
                 </div>
-                <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Show me more</a>
-                </div>
+                
             </div>
         </div>
 

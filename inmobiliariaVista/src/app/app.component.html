@@ -120,18 +120,21 @@
 <link href='https://fonts.googleapis.com/css?family=Lato:400,600,300;Roboto+Condensed:400,700' rel='stylesheet'
   type='text/css'>
 <script type='text/javascript' src='https://code.jquery.com/jquery-1.10.2.min.js'></script>
+<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
 <div class="grid-container">
   <div class="fixed5">
   <div class="header">
     <h1><a href="">InmoEnergy</a></h1><br>
 
-    <div class="fixed3">
-      <h3><a href="/consultaCasas"> Casas </a></h3>
-      
-    </div>
-    <div class="fixed4">
-      <h3><a href=""> Apartamentos </a></h3>
-    </div>
+    <body>
+      <nav class="navMenu">
+        <a href="/consultaCasas">Casas</a>
+        <a href="#">Apartamento</a>
+        <a href="#">Cabaña</a>
+        <div class="dot"></div>
+      </nav>
+    </body>
+    
 
 
     <!--icono de ingreso-->
@@ -160,6 +163,7 @@
 
 
 
+</div>
 </div>
 </div>
 <router-outlet></router-outlet>

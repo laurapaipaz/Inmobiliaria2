@@ -59,30 +59,13 @@ app.post("/insertarInmueble", (req, res) => {
 //Insertar un usuaurio
 //******************* */
 app.put("/registrar-usuario", (req, res) => {
-  //res.header('Access-Control-Allow-Origin', '*');
-  //res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-  //res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  //res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
-  
-  //crea el esquema
+
   var myobj = { cedula: req.body.cedula, nombre: req.body.nombre, apellido: req.body.apellido, correo: req.body.email, telefono: req.body.telefono, clave: req.body.contraseña };
   modeloUsario.collection.insertOne(myobj, function (err, res) {
   if (err) throw err;
   })
   res.send("datos creados")
-  //console.log("Respuesta del servidor por petición de registro usuario")
-  
-  //const respuesta={
-  //  cedula: req.body.cedula,
-    //nombre: req.body.nombre,
-    //apellido: req.body.apellido,
-    //correo: req.body.email,
-    //telefono: req.body.telefono,
-    //clave: req.body.contraseña
-
-  //}
-
-  //res.send(JSON.stringify(respuesta))
+ 
 })
 
 //Consultar inmueble
@@ -107,19 +90,19 @@ app.get('/consultaInmuebles', (req, res) => {
 //Consultar casas
 //*************** */
 app.get('/consultaCasas', (req, res) => {
-  modeloinmueble.find({tipo:req.query.tipo},(err,casas)=>{
-    res.end(JSON.stringify(casas))
+  modeloinmueble.find({tipo:req.query.tipo},function(err,casas){
+    modeloUbicacion.populate(casas,{path:'ubicacion'}, function (err, casas) {
+      res.send(JSON.stringify(casas))
+    });
   })
 })
 
-
-
-
+//consulta que nos permite obtener los inmuebles unidos con 
 app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
   createReadStream('./index.html').pipe(res)
 })
 
-app.listen(600, () => {
-  console.log("aplicacion corriendo en el puerto 600")
+app.listen(400, () => {
+  console.log("aplicacion corriendo en el puerto 400")
 })
